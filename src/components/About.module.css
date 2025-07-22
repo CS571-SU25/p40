@@ -1,0 +1,19 @@
+.aboutItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.aboutIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1.5rem;
+}
+
+.aboutItem p {
+  flex: 1;
+  margin: 0;
+  line-height: 1.6;
+  /* reduce the font size to make it smaller */
+  font-size: 0.7rem;
+}

@@ -9,7 +9,7 @@ function Navbar() {
         {/* home icon */}
         <a className="navbar-brand" href="#home">
           <img
-            src="/assets/dev.png"
+            src="assets/dev.png"
             alt="home icon"
             style={{ height: '40px' }}
           />

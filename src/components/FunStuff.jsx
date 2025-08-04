@@ -12,17 +12,17 @@ function FunStuff() {
     {
       name: 'honorary local',
       description: 'went to boston with my fav people!',
-      image: '/assets/fun-stuff/activity1/1.jpeg',
+      image: 'assets/fun-stuff/activity1/1.jpeg',
     },
     {
       name: 'sir dives-alot',
       description: 'became a certified PADI open water diver!',
-      image: '/assets/fun-stuff/activity2/1.jpeg',
+      image: 'assets/fun-stuff/activity2/1.jpeg',
     },
     {
       name: 'absolute nail-biter fr',
       description: 'saw the nations league quarterfinals in spain!',
-      image: '/assets/fun-stuff/activity3/1.jpeg',
+      image: 'assets/fun-stuff/activity3/1.jpeg',
     },
     /*{
       name: 'Activity Four',

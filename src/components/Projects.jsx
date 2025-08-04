@@ -10,21 +10,21 @@ function Projects() {
       name: 'open-lambda',
       description:
         'giving your code main character energy by letting it run instantly without any backend baggage.',
-      image: '/assets/projects/lambda.png',
+      image: 'assets/projects/lambda.png',
       githubLink: 'https://github.com/open-lambda/open-lambda',
     },
     {
       name: 'weather-data-service',
       description:
         'my take on a fault-tolerant weather service. it’s fast, scalable, and built with a smarter data schema so it never quits.',
-      image: '/assets/projects/weather.png',
+      image: 'assets/projects/weather.png',
       githubLink: 'https://github.com/guptadevagya/weather-data-service',
     },
     {
       name: 'waffle-game',
       description:
         'an addicting, waffle-shaped word puzzle. unscramble six intersecting words before you run out of swaps.',
-      image: '/assets/projects/waffle.png',
+      image: 'assets/projects/waffle.png',
       githubLink: 'https://github.com/guptadevagya/waffle-game',
     },
   ];

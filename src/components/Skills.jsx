@@ -2,41 +2,41 @@
 function Skills() {
   // array of objects for languages
   const languages = [
-    { name: 'Python', icon: '/assets/skills-icons/python.png' },
-    { name: 'Java', icon: '/assets/skills-icons/java.png' },
-    { name: 'C', icon: '/assets/skills-icons/c.png' },
-    { name: 'C++', icon: '/assets/skills-icons/c-plus-plus.png' },
-    { name: 'Kotlin', icon: '/assets/skills-icons/kotlin.png' },
-    { name: 'Go', icon: '/assets/skills-icons/golang.png' },
+    { name: 'Python', icon: 'assets/skills-icons/python.png' },
+    { name: 'Java', icon: 'assets/skills-icons/java.png' },
+    { name: 'C', icon: 'assets/skills-icons/c.png' },
+    { name: 'C++', icon: 'assets/skills-icons/c-plus-plus.png' },
+    { name: 'Kotlin', icon: 'assets/skills-icons/kotlin.png' },
+    { name: 'Go', icon: 'assets/skills-icons/golang.png' },
   ];
 
   // array of objects for front-end skills
   const frontend = [
-    { name: 'HTML', icon: '/assets/skills-icons/html.png' },
-    { name: 'CSS', icon: '/assets/skills-icons/css.png' },
-    { name: 'Javascript', icon: '/assets/skills-icons/javascript.png' },
-    { name: 'React', icon: '/assets/skills-icons/react.png' },
-    { name: 'Bootstrap', icon: '/assets/skills-icons/bootstrap.png' },
-    { name: 'SwiftUI', icon: '/assets/skills-icons/swiftui.png' },
+    { name: 'HTML', icon: 'assets/skills-icons/html.png' },
+    { name: 'CSS', icon: 'assets/skills-icons/css.png' },
+    { name: 'Javascript', icon: 'assets/skills-icons/javascript.png' },
+    { name: 'React', icon: 'assets/skills-icons/react.png' },
+    { name: 'Bootstrap', icon: 'assets/skills-icons/bootstrap.png' },
+    { name: 'SwiftUI', icon: 'assets/skills-icons/swiftui.png' },
   ];
 
   // array of objects for back-end skills
   const backend = [
-    { name: 'Node', icon: '/assets/skills-icons/node.png' },
-    { name: 'MySQL', icon: '/assets/skills-icons/mysql.png' },
-    { name: 'MongoDB', icon: '/assets/skills-icons/mongodb.png' },
-    { name: 'Firebase', icon: '/assets/skills-icons/firebase.png' },
-    { name: 'PyTorch', icon: '/assets/skills-icons/pytorch.png' },
+    { name: 'Node', icon: 'assets/skills-icons/node.png' },
+    { name: 'MySQL', icon: 'assets/skills-icons/mysql.png' },
+    { name: 'MongoDB', icon: 'assets/skills-icons/mongodb.png' },
+    { name: 'Firebase', icon: 'assets/skills-icons/firebase.png' },
+    { name: 'PyTorch', icon: 'assets/skills-icons/pytorch.png' },
   ];
 
   // array of objects for productivity skills
   const productivity = [
-    { name: 'Git', icon: '/assets/skills-icons/git.png' },
-    { name: 'Docker', icon: '/assets/skills-icons/docker.png' },
-    { name: 'VS Code', icon: '/assets/skills-icons/vscode.png' },
-    { name: 'LaTeX', icon: '/assets/skills-icons/latex.png' },
-    { name: 'Figma', icon: '/assets/skills-icons/figma.png' },
-    { name: 'Canva', icon: '/assets/skills-icons/canva.png' },
+    { name: 'Git', icon: 'assets/skills-icons/git.png' },
+    { name: 'Docker', icon: 'assets/skills-icons/docker.png' },
+    { name: 'VS Code', icon: 'assets/skills-icons/vscode.png' },
+    { name: 'LaTeX', icon: 'assets/skills-icons/latex.png' },
+    { name: 'Figma', icon: 'assets/skills-icons/figma.png' },
+    { name: 'Canva', icon: 'assets/skills-icons/canva.png' },
   ];
 
   // styles for skill items

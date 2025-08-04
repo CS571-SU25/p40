@@ -36,7 +36,7 @@ function Home() {
         {/* resume button */}
         <a
           className="nes-btn is-warning"
-          href="/assets/Devagya_Gupta_Resume.pdf"
+          href="assets/Devagya_Gupta_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >

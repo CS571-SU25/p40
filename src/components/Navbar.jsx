@@ -1,61 +1,75 @@
-import React from 'react'; // import react
-import styles from './Navbar.module.css'; // this import is now being used
+import React from 'react';
+import { Navbar as BSNavbar, Nav, Container } from 'react-bootstrap';
+import styles from './Navbar.module.css';
 
 // navbar component
 function Navbar() {
   return (
-    <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-      <div className="container-fluid">
+    <BSNavbar
+      expand="lg"
+      variant="dark"
+      bg="dark"
+      fixed="top"
+      aria-label="Main navigation"
+    >
+      <Container fluid>
         {/* home icon */}
-        <a className="navbar-brand" href="#home">
+        <BSNavbar.Brand href="#home" aria-label="Devagya Gupta - Home">
           <img
             src="assets/dev.png"
-            alt="home icon"
+            alt="Devagya Gupta's logo"
             style={{ height: '40px' }}
           />
-        </a>
+        </BSNavbar.Brand>
+
         {/* hamburger menu for mobile */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        <BSNavbar.Toggle
+          aria-controls="main-navbar-nav"
+          aria-label="Toggle navigation menu"
+        />
+
         {/* nav links */}
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mx-auto">
-            {/* apply the custom style to each link like this */}
-            <li className="nav-item">
-              <a className={`nav-link ${styles.navLink}`} href="#about">
-                About Me
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className={`nav-link ${styles.navLink}`} href="#skills">
-                Skills
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className={`nav-link ${styles.navLink}`} href="#projects">
-                Projects
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className={`nav-link ${styles.navLink}`} href="#fun">
-                Fun
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className={`nav-link ${styles.navLink}`} href="#contact">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+        <BSNavbar.Collapse id="main-navbar-nav">
+          <Nav className="mx-auto">
+            <Nav.Link
+              href="#about"
+              className={styles.navLink}
+              aria-label="Navigate to About Me section"
+            >
+              About Me
+            </Nav.Link>
+            <Nav.Link
+              href="#skills"
+              className={styles.navLink}
+              aria-label="Navigate to Skills section"
+            >
+              Skills
+            </Nav.Link>
+            <Nav.Link
+              href="#projects"
+              className={styles.navLink}
+              aria-label="Navigate to Projects section"
+            >
+              Projects
+            </Nav.Link>
+            <Nav.Link
+              href="#fun"
+              className={styles.navLink}
+              aria-label="Navigate to Fun section"
+            >
+              Fun
+            </Nav.Link>
+            <Nav.Link
+              href="#contact-form"
+              className={styles.navLink}
+              aria-label="Navigate to Contact Form section"
+            >
+              Contact
+            </Nav.Link>
+          </Nav>
+        </BSNavbar.Collapse>
+      </Container>
+    </BSNavbar>
   );
 }
 

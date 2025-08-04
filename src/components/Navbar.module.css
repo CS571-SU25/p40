@@ -1,6 +1,29 @@
-/* adds more space between nav links */
+/* Navigation link styling with accessibility considerations */
 .navLink {
-  padding: 0 1rem !important;
-  text-decoration: none; /* removes underline from links */
-  transition: color 0.2s; /* smooth color transition on hover */
+  padding: 0.5rem 1rem !important;
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  color: #ffffff !important; /* Ensure high contrast */
+  font-weight: 500;
+  border-radius: 4px;
+  margin: 0 0.25rem;
+}
+
+/* Hover state with sufficient contrast */
+.navLink:hover {
+  color: #ffc107 !important; /* Bootstrap warning color for good contrast */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Focus state for keyboard navigation */
+.navLink:focus {
+  outline: 2px solid #ffc107;
+  outline-offset: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Active state */
+.navLink:active {
+  color: #ffc107 !important;
+  background-color: rgba(255, 255, 255, 0.2);
 }

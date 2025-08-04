@@ -1,3 +1,7 @@
+import React from 'react';
+import { Container, Row, Col, Card, ListGroup } from 'react-bootstrap';
+import Section from './Section';
+
 // skills component
 function Skills() {
   // array of objects for languages
@@ -39,22 +43,6 @@ function Skills() {
     { name: 'Canva', icon: 'assets/skills-icons/canva.png' },
   ];
 
-  // styles for skill items
-  const skillItemStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    marginBottom: '1rem',
-    fontSize: '1.3rem', // increased font size
-  };
-
-  // styles for icons
-  const iconStyle = {
-    marginRight: '1rem',
-    width: '24px',
-    height: '24px',
-    objectFit: 'contain',
-  };
-
   // array of objects for skill categories
   const skillCategories = [
     { title: 'Languages', skills: languages },
@@ -64,61 +52,66 @@ function Skills() {
   ];
 
   return (
-    <section
-      id="skills"
-      className="container text-center"
-      style={{
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-      }}
-    >
-      <h3 className="text-center text-white my-5">Skills</h3>
-
-      <div className="container" style={{ maxWidth: '1050px' }}>
-        <div className="row justify-content-center">
+    <Section id="skills" title="Skills" headingLevel={2}>
+      <Container style={{ maxWidth: '1050px' }}>
+        <Row className="justify-content-center">
           {/* map through the skill categories and display them */}
           {skillCategories.map((category) => (
-            <div key={category.title} className="col-lg-5 col-md-6 mb-5">
-              <div
-                className="nes-container is-dark with-title h-100 d-flex flex-column align-items-center"
+            <Col key={category.title} lg={6} md={6} className="mb-4">
+              <Card
+                bg="dark"
+                text="white"
+                className="h-100"
                 style={{
                   backgroundColor: 'hsl(212, 42%, 20%)',
+                  border: '2px solid #6c757d',
                 }}
               >
-                <p
-                  className="title text-center"
-                  style={{
-                    fontSize: '1.3rem',
-                    color: 'hsl(195, 75%, 52%)',
-                    backgroundColor: 'hsl(212, 42%, 20%)',
-                  }}
-                >
-                  {category.title}
-                </p>
-                <ul
-                  className="nes-list text-center"
-                  style={{ listStyleType: 'none', padding: 0 }}
-                >
-                  {/* map through the skills and display them */}
-                  {category.skills.map((skill) => (
-                    <li key={skill.name} style={skillItemStyle}>
-                      <img
-                        src={skill.icon}
-                        alt={`${skill.name} icon`}
-                        style={iconStyle}
-                      />
-                      <span className="text-white">{skill.name}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+                <Card.Header className="text-center">
+                  <Card.Title
+                    as="h3"
+                    className="mb-0"
+                    style={{
+                      fontSize: '1.3rem',
+                      color: 'hsl(195, 75%, 52%)',
+                    }}
+                  >
+                    {category.title}
+                  </Card.Title>
+                </Card.Header>
+                <Card.Body className="p-0">
+                  <ListGroup variant="flush">
+                    {/* map through the skills and display them */}
+                    {category.skills.map((skill) => (
+                      <ListGroup.Item
+                        key={skill.name}
+                        className="d-flex align-items-center bg-transparent text-white border-secondary"
+                        style={{
+                          fontSize: '1.1rem',
+                          padding: '0.75rem 1rem',
+                        }}
+                      >
+                        <img
+                          src={skill.icon}
+                          alt={`${skill.name} technology logo`}
+                          style={{
+                            marginRight: '1rem',
+                            width: '24px',
+                            height: '24px',
+                            objectFit: 'contain',
+                          }}
+                        />
+                        <span>{skill.name}</span>
+                      </ListGroup.Item>
+                    ))}
+                  </ListGroup>
+                </Card.Body>
+              </Card>
+            </Col>
           ))}
-        </div>
-      </div>
-    </section>
+        </Row>
+      </Container>
+    </Section>
   );
 }
 

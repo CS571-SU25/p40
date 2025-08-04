@@ -1,73 +1,95 @@
-import React from 'react'; // import react
-import Section from './Section'; // import section component
-import styles from './Projects.module.css'; // import css for styling
+import React from 'react';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import Section from './Section';
 
 // projects component
 function Projects() {
   // array of objects for project data
   const projectData = [
     {
+      id: 1,
       name: 'open-lambda',
       description:
-        'giving your code main character energy by letting it run instantly without any backend baggage.',
+        'Giving your code main character energy by letting it run instantly without any backend baggage.',
       image: 'assets/projects/lambda.png',
       githubLink: 'https://github.com/open-lambda/open-lambda',
     },
     {
+      id: 2,
       name: 'weather-data-service',
       description:
-        'my take on a fault-tolerant weather service. it’s fast, scalable, and built with a smarter data schema so it never quits.',
+        'My take on a fault-tolerant weather service. It is fast, scalable, and built with a smarter data schema so it never quits.',
       image: 'assets/projects/weather.png',
       githubLink: 'https://github.com/guptadevagya/weather-data-service',
     },
     {
+      id: 3,
       name: 'waffle-game',
       description:
-        'an addicting, waffle-shaped word puzzle. unscramble six intersecting words before you run out of swaps.',
+        'An addicting, waffle-shaped word puzzle. Unscramble six intersecting words before you run out of swaps.',
       image: 'assets/projects/waffle.png',
       githubLink: 'https://github.com/guptadevagya/waffle-game',
     },
   ];
 
   return (
-    // using section component for the projects section
-    <Section id="projects" title="Projects">
-      <div className="container" style={{ maxWidth: '1200px' }}>
-        <div className="row justify-content-center">
+    <Section id="projects" title="Projects" headingLevel={2}>
+      <Container style={{ maxWidth: '1200px' }}>
+        <Row className="justify-content-center">
           {/* map through the project data and display them */}
           {projectData.map((project) => (
-            // change col-lg-6 to col-lg-5 to make the cards smaller
-            <div key={project.name} className="col-lg-5 mb-5">
-              <div className={styles.card__article}>
-                <div className={styles.card__image}>
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className={styles.card__img}
-                  />
-                  {/* github icon */}
-                  <a
+            <Col key={project.id} lg={6} md={6} className="mb-4">
+              <Card
+                className="h-100 bg-dark text-white"
+                style={{
+                  backgroundColor: 'hsl(212, 42%, 20%)',
+                  border: '2px solid #6c757d',
+                  transition: 'transform 0.2s ease-in-out',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                <Card.Img
+                  variant="top"
+                  src={project.image}
+                  alt={`${project.name} project screenshot`}
+                  style={{
+                    height: '200px',
+                    objectFit: 'cover',
+                    objectPosition: 'center',
+                  }}
+                />
+                <Card.Body className="d-flex flex-column">
+                  <Card.Title as="h3" className="text-warning">
+                    {project.name}
+                  </Card.Title>
+                  <Card.Text className="flex-grow-1">
+                    {project.description}
+                  </Card.Text>
+                  <Button
+                    variant="outline-light"
                     href={project.githubLink}
-                    className={styles.githubIcon}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="mt-auto"
+                    aria-label={`View ${project.name} project on GitHub (opens in new tab)`}
                   >
-                    <i className="nes-icon github is-medium"></i>
-                  </a>
-                  <div className={styles.card__shadow}></div>
-                </div>
-                {/* project name and description */}
-                <div className={styles.card__data}>
-                  <h3 className={styles.card__name}>{project.name}</h3>
-                  <p className={styles.card__description}>
-                    {project.description}
-                  </p>
-                </div>
-              </div>
-            </div>
+                    <i
+                      className="nes-icon github is-small me-2"
+                      aria-hidden="true"
+                    ></i>
+                    View on GitHub
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
           ))}
-        </div>
-      </div>
+        </Row>
+      </Container>
     </Section>
   );
 }

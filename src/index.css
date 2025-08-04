@@ -5,7 +5,7 @@ html {
 body {
   margin: 0; /* remove default margin */
   font-family: 'Press Start 2P', fantasy; /* set default font */
-  background-image: url('assets/animated.gif'); /* set background image */
+  background-image: url('/assets/animated.gif'); /* set background image */
   background-size: cover; /* cover the entire background */
   background-repeat: no-repeat; /* don't repeat the background image */
   background-attachment: fixed; /* fix the background image on scroll */

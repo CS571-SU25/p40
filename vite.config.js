@@ -1,11 +1,11 @@
+// vite.config.js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/', // set the base path for the project
+  base: '/p40/', // set the base path for the project
   build: {
-    outDir: 'docs', // specify the output directory for the build
+    outDir: 'docs', // keep docs for GH-Pages
   },
 });

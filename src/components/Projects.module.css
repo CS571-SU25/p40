@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card__content {
+  width: 100%;
+  max-width: 1400px; /* Controls the max width of the slider */
+  padding-bottom: 3rem;
+  overflow: hidden;
+}
+
+.card__article {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__image {
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.card__data {
+  background-color: hsl(212, 42%, 20%);
+  padding: 1rem 2rem;
+  text-align: center;
+  position: relative;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card__shadow {
+  width: 200px;
+  height: 200px;
+  background-color: hsl(32, 75%, 50%);
+  border-radius: 50%;
+  position: absolute;
+  top: 3.75rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  filter: blur(45px);
+  z-index: -1;
+}
+
+.card__name {
+  font-size: 1.1rem;
+  color: hsl(195, 75%, 52%);
+  margin-bottom: 0.5rem;
+}
+
+.card__description {
+  font-weight: 500;
+  font-size: 1rem;
+  color: hsl(212, 4%, 95%);
+  margin-bottom: 1.5rem;
+}
+
+/* add this new style for the icon */
+.githubIcon {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 10;
+}

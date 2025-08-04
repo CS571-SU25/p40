@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Section({ id, title, children }) {
   // home section does not get the 'content-section' class
   const sectionClass = id === 'home' ? 'section' : 'section content-section';

@@ -1,0 +1,6 @@
+/* Adds more space between nav links */
+.navLink {
+  padding: 0 1rem !important; /* Increased padding from 1.5rem to 2rem */
+  text-decoration: none;
+  transition: color 0.2s;
+}

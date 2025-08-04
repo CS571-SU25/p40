@@ -1,24 +1,24 @@
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* smooth scrolling for anchor links */
 }
 
 body {
-  margin: 0;
-  font-family: 'Press Start 2P', fantasy;
-  background-image: url('/assets/animated.gif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: #212529; /* Fallback color */
+  margin: 0; /* remove default margin */
+  font-family: 'Press Start 2P', fantasy; /* set default font */
+  background-image: url('/assets/animated.gif'); /* set background image */
+  background-size: cover; /* cover the entire background */
+  background-repeat: no-repeat; /* don't repeat the background image */
+  background-attachment: fixed; /* fix the background image on scroll */
+  background-color: #212529; /* fallback color */
 }
 
 /* this single rule will style and center every section */
 section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem 1rem;
-  color: white;
+  min-height: 100vh; /* set minimum height to full viewport height */
+  display: flex; /* use flexbox for layout */
+  flex-direction: column; /* stack items vertically */
+  justify-content: center; /* center items vertically */
+  align-items: center; /* center items horizontally */
+  padding: 5rem 1rem; /* add some padding */
+  color: white; /* set text color to white */
 }

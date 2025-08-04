@@ -1,11 +1,13 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import { Swiper, SwiperSlide } from 'swiper/react'; // import swiper components
+import 'swiper/css'; // import swiper styles
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import styles from './FunStuff.module.css';
-import { Navigation, Pagination } from 'swiper/modules';
+import styles from './FunStuff.module.css'; // import css for styling
+import { Navigation, Pagination } from 'swiper/modules'; // import swiper modules
 
+// fun stuff component
 function FunStuff() {
+  // array of objects for fun activities
   const funActivities = [
     {
       name: 'honorary local',
@@ -42,14 +44,15 @@ function FunStuff() {
   return (
     <section id="fun" className={styles.container}>
       <h3 className="text-center text-white my-5">irl dlcs</h3>
+      {/* swiper component for the fun stuff section */}
       <Swiper
         modules={[Navigation, Pagination]}
         loop={false}
-        spaceBetween={30} // Adjust space between cards
+        spaceBetween={30} // adjust space between cards
         grabCursor={true}
         pagination={{ clickable: true, dynamicBullets: true }}
         navigation={true}
-        // Responsive breakpoints
+        // responsive breakpoints
         breakpoints={{
           // when window width is >= 320px
           320: { slidesPerView: 1 },
@@ -60,6 +63,7 @@ function FunStuff() {
         }}
         className={styles.card__content}
       >
+        {/* map through the fun activities and display them */}
         {funActivities.map((activity) => (
           <SwiperSlide key={activity.name} className={styles.card__article}>
             <div className={styles.card__image}>

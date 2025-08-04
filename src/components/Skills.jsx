@@ -1,4 +1,6 @@
+// skills component
 function Skills() {
+  // array of objects for languages
   const languages = [
     { name: 'Python', icon: '/assets/skills-icons/python.png' },
     { name: 'Java', icon: '/assets/skills-icons/java.png' },
@@ -8,6 +10,7 @@ function Skills() {
     { name: 'Go', icon: '/assets/skills-icons/golang.png' },
   ];
 
+  // array of objects for front-end skills
   const frontend = [
     { name: 'HTML', icon: '/assets/skills-icons/html.png' },
     { name: 'CSS', icon: '/assets/skills-icons/css.png' },
@@ -17,6 +20,7 @@ function Skills() {
     { name: 'SwiftUI', icon: '/assets/skills-icons/swiftui.png' },
   ];
 
+  // array of objects for back-end skills
   const backend = [
     { name: 'Node', icon: '/assets/skills-icons/node.png' },
     { name: 'MySQL', icon: '/assets/skills-icons/mysql.png' },
@@ -25,6 +29,7 @@ function Skills() {
     { name: 'PyTorch', icon: '/assets/skills-icons/pytorch.png' },
   ];
 
+  // array of objects for productivity skills
   const productivity = [
     { name: 'Git', icon: '/assets/skills-icons/git.png' },
     { name: 'Docker', icon: '/assets/skills-icons/docker.png' },
@@ -34,6 +39,7 @@ function Skills() {
     { name: 'Canva', icon: '/assets/skills-icons/canva.png' },
   ];
 
+  // styles for skill items
   const skillItemStyle = {
     display: 'flex',
     alignItems: 'center',
@@ -41,6 +47,7 @@ function Skills() {
     fontSize: '1.3rem', // increased font size
   };
 
+  // styles for icons
   const iconStyle = {
     marginRight: '1rem',
     width: '24px',
@@ -48,6 +55,7 @@ function Skills() {
     objectFit: 'contain',
   };
 
+  // array of objects for skill categories
   const skillCategories = [
     { title: 'Languages', skills: languages },
     { title: 'Front-end', skills: frontend },
@@ -70,6 +78,7 @@ function Skills() {
 
       <div className="container" style={{ maxWidth: '1050px' }}>
         <div className="row justify-content-center">
+          {/* map through the skill categories and display them */}
           {skillCategories.map((category) => (
             <div key={category.title} className="col-lg-5 col-md-6 mb-5">
               <div
@@ -92,6 +101,7 @@ function Skills() {
                   className="nes-list text-center"
                   style={{ listStyleType: 'none', padding: 0 }}
                 >
+                  {/* map through the skills and display them */}
                   {category.skills.map((skill) => (
                     <li key={skill.name} style={skillItemStyle}>
                       <img

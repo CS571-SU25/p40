@@ -1,81 +1,81 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  display: flex; /* use flexbox for layout */
+  flex-direction: column; /* stack items vertically */
+  justify-content: center; /* center items horizontally */
+  align-items: center; /* center items vertically */
+  min-height: 100vh; /* set minimum height to full viewport height */
 }
 
 .card__content {
-  width: 100%;
-  max-width: 1400px; /* Controls the max width of the slider */
-  padding-bottom: 3rem;
-  overflow: hidden;
+  width: 100%; /* set width to 100% */
+  max-width: 1400px; /* controls the max width of the slider */
+  padding-bottom: 3rem; /* add some space at the bottom */
+  overflow: hidden; /* hide overflowing content */
 }
 
 .card__article {
-  border-radius: 1.25rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  border-radius: 1.25rem; /* round the corners */
+  overflow: hidden; /* hide overflowing content */
+  display: flex; /* use flexbox for layout */
+  flex-direction: column; /* stack items vertically */
 }
 
 .card__image {
-  position: relative;
-  background-color: transparent;
-  overflow: hidden;
-  aspect-ratio: 1 / 1;
+  position: relative; /* set position to relative for absolute positioning of children */
+  background-color: transparent; /* set background color to transparent */
+  overflow: hidden; /* hide overflowing content */
+  aspect-ratio: 1 / 1; /* keep the image square */
 }
 
 .card__data {
-  background-color: hsl(212, 42%, 20%);
-  padding: 1rem 2rem;
-  text-align: center;
-  position: relative;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-color: hsl(212, 42%, 20%); /* set background color */
+  padding: 1rem 2rem; /* add some padding */
+  text-align: center; /* center text */
+  position: relative; /* set position to relative for absolute positioning of children */
+  height: 200px; /* set a fixed height */
+  display: flex; /* use flexbox for layout */
+  flex-direction: column; /* stack items vertically */
+  justify-content: center; /* center items vertically */
 }
 
 .card__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  width: 100%; /* set width to 100% */
+  height: 100%; /* set height to 100% */
+  object-fit: cover; /* cover the container while maintaining aspect ratio */
+  display: block; /* remove extra space below the image */
 }
 
 .card__shadow {
-  width: 200px;
-  height: 200px;
-  background-color: hsl(32, 75%, 50%);
-  border-radius: 50%;
-  position: absolute;
-  top: 3.75rem;
-  left: 0;
-  right: 0;
-  margin-inline: auto;
-  filter: blur(45px);
-  z-index: -1;
+  width: 200px; /* set a fixed width */
+  height: 200px; /* set a fixed height */
+  background-color: hsl(32, 75%, 50%); /* set background color */
+  border-radius: 50%; /* make it a circle */
+  position: absolute; /* position it relative to the parent */
+  top: 3.75rem; /* position from the top */
+  left: 0; /* position from the left */
+  right: 0; /* position from the right */
+  margin-inline: auto; /* center it horizontally */
+  filter: blur(45px); /* apply a blur effect */
+  z-index: -1; /* send it to the back */
 }
 
 .card__name {
-  font-size: 1.1rem;
-  color: hsl(195, 75%, 52%);
-  margin-bottom: 0.5rem;
+  font-size: 1.1rem; /* set font size */
+  color: hsl(195, 75%, 52%); /* set text color */
+  margin-bottom: 0.5rem; /* add some space at the bottom */
 }
 
 .card__description {
-  font-weight: 500;
-  font-size: 1rem;
-  color: hsl(212, 4%, 95%);
-  margin-bottom: 1.5rem;
+  font-weight: 500; /* set font weight */
+  font-size: 1rem; /* set font size */
+  color: hsl(212, 4%, 95%); /* set text color */
+  margin-bottom: 1.5rem; /* add some space at the bottom */
 }
 
 /* add this new style for the icon */
 .githubIcon {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  z-index: 10;
+  position: absolute; /* position it relative to the parent */
+  bottom: 10px; /* position from the bottom */
+  left: 10px; /* position from the left */
+  z-index: 10; /* make sure it's on top */
 }

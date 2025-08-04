@@ -1,10 +1,12 @@
-import React from 'react';
-import styles from './Navbar.module.css'; // This import is now being used
+import React from 'react'; // import react
+import styles from './Navbar.module.css'; // this import is now being used
 
+// navbar component
 function Navbar() {
   return (
     <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
+        {/* home icon */}
         <a className="navbar-brand" href="#home">
           <img
             src="/assets/dev.png"
@@ -12,6 +14,7 @@ function Navbar() {
             style={{ height: '40px' }}
           />
         </a>
+        {/* hamburger menu for mobile */}
         <button
           className="navbar-toggler"
           type="button"
@@ -20,9 +23,10 @@ function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+        {/* nav links */}
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mx-auto">
-            {/* Apply the custom style to each link like this */}
+            {/* apply the custom style to each link like this */}
             <li className="nav-item">
               <a className={`nav-link ${styles.navLink}`} href="#about">
                 About Me

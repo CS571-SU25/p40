@@ -1,103 +1,103 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  display: flex; /* use flexbox for layout */
+  flex-direction: column; /* stack items vertically */
+  justify-content: center; /* center items horizontally */
+  align-items: center; /* center items vertically */
+  min-height: 100vh; /* set minimum height to full viewport height */
 }
 
 .card__content {
-  width: 100%;
-  max-width: 1400px; /* Controls the max width of the slider */
-  padding-bottom: 3rem;
-  overflow: hidden;
+  width: 100%; /* set width to 100% */
+  max-width: 1400px; /* controls the max width of the slider */
+  padding-bottom: 3rem; /* add some space at the bottom */
+  overflow: hidden; /* hide overflowing content */
 }
 
 .card__article {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* use flexbox for layout */
+  flex-direction: column; /* stack items vertically */
   aspect-ratio: 1 / 1; /* keeps the whole card square */
 }
 
 .card__image {
   flex: 1; /* grow to fill whatever vertical space is left */
-  position: relative;
-  overflow: hidden;
-  border-top-left-radius: 1.25rem;
-  border-top-right-radius: 1.25rem;
+  position: relative; /* set position to relative for absolute positioning of children */
+  overflow: hidden; /* hide overflowing content */
+  border-top-left-radius: 1.25rem; /* round the top left corner */
+  border-top-right-radius: 1.25rem; /* round the top right corner */
 }
 
 .card__data {
   /* instead of height: 150px; */
   min-height: 100px; /* or whatever minimum you like */
   padding: 1rem 1rem; /* less vertical padding */
-  display: flex;
-  flex-direction: column;
+  display: flex; /* use flexbox for layout */
+  flex-direction: column; /* stack items vertically */
   justify-content: center; /* keeps text centered vertically */
-  align-items: center;
-  background-color: hsl(212, 42%, 20%);
-  border-bottom-left-radius: 1.25rem;
-  border-bottom-right-radius: 1.25rem;
-  text-align: center;
+  align-items: center; /* center items horizontally */
+  background-color: hsl(212, 42%, 20%); /* set background color */
+  border-bottom-left-radius: 1.25rem; /* round the bottom left corner */
+  border-bottom-right-radius: 1.25rem; /* round the bottom right corner */
+  text-align: center; /* center text */
 }
 
 .card__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  width: 100%; /* set width to 100% */
+  height: 100%; /* set height to 100% */
+  object-fit: cover; /* cover the container while maintaining aspect ratio */
+  display: block; /* remove extra space below the image */
 }
 
 .card__shadow {
-  width: 200px;
-  height: 200px;
-  background-color: hsl(32, 75%, 50%);
-  border-radius: 50%;
-  position: absolute;
-  top: 3.75rem;
-  left: 0;
-  right: 0;
-  margin-inline: auto;
-  filter: blur(45px);
-  z-index: -1;
+  width: 200px; /* set a fixed width */
+  height: 200px; /* set a fixed height */
+  background-color: hsl(32, 75%, 50%); /* set background color */
+  border-radius: 50%; /* make it a circle */
+  position: absolute; /* position it relative to the parent */
+  top: 3.75rem; /* position from the top */
+  left: 0; /* position from the left */
+  right: 0; /* position from the right */
+  margin-inline: auto; /* center it horizontally */
+  filter: blur(45px); /* apply a blur effect */
+  z-index: -1; /* send it to the back */
 }
 
 .card__name {
-  font-size: 1.1rem;
-  color: hsl(195, 75%, 52%);
-  margin-bottom: 0.5rem;
+  font-size: 1.1rem; /* set font size */
+  color: hsl(195, 75%, 52%); /* set text color */
+  margin-bottom: 0.5rem; /* add some space at the bottom */
 }
 
 .card__description {
-  font-weight: 500;
-  font-size: 0.9rem;
-  color: hsl(212, 4%, 95%);
+  font-weight: 500; /* set font weight */
+  font-size: 0.9rem; /* set font size */
+  color: hsl(212, 4%, 95%); /* set text color */
 }
 
-/* --- Global Swiper Styles --- */
+/* --- global swiper styles --- */
 :global(.swiper-button-prev),
 :global(.swiper-button-next) {
-  color: white;
-  position: absolute;
+  color: white; /* set button color */
+  position: absolute; /* position it relative to the swiper container */
   top: 180px; /* absolute distance from top of the swiper */
-  transform: none;
-  z-index: 10; /* Ensures buttons are on top */
+  transform: none; /* remove default transform */
+  z-index: 10; /* ensures buttons are on top */
 }
 
 :global(.swiper-button-prev) {
-  left: 10px;
+  left: 10px; /* position from the left */
 }
 
 :global(.swiper-button-next) {
-  right: 10px;
+  right: 10px; /* position from the right */
 }
 
 :global(.swiper-pagination) {
-  bottom: 0 !important;
+  bottom: 0 !important; /* position at the bottom */
 }
 
 :global(.swiper-pagination-bullet) {
-  background-color: white !important;
+  background-color: white !important; /* set bullet color */
 }
 
 :global(.swiper-pagination-bullet-active) {

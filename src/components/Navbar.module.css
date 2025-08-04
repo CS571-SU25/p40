@@ -1,6 +1,6 @@
-/* Adds more space between nav links */
+/* adds more space between nav links */
 .navLink {
-  padding: 0 1rem !important; /* Increased padding from 1.5rem to 2rem */
-  text-decoration: none;
-  transition: color 0.2s;
+  padding: 0 1rem !important;
+  text-decoration: none; /* removes underline from links */
+  transition: color 0.2s; /* smooth color transition on hover */
 }

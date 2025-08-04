@@ -1,19 +1,19 @@
 .aboutItem {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1.5rem;
+  display: flex; /* use flexbox for layout */
+  align-items: flex-start; /* align items to the start */
+  margin-bottom: 1.5rem; /* add some space at the bottom */
 }
 
 .aboutIcon {
-  width: 24px;
-  height: 24px;
-  margin-right: 1.5rem;
+  width: 24px; /* set a fixed width */
+  height: 24px; /* set a fixed height */
+  margin-right: 1.5rem; /* add some space to the right */
 }
 
 .aboutItem p {
-  flex: 1;
-  margin: 0;
-  line-height: 1.6;
+  flex: 1; /* allow the text to take up remaining space */
+  margin: 0; /* remove default margin */
+  line-height: 1.6; /* adjust line height for readability */
   /* reduce the font size to make it smaller */
   font-size: 0.85rem;
 }

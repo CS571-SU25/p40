@@ -1,8 +1,10 @@
-import React from 'react';
-import Section from './Section';
-import styles from './Projects.module.css';
+import React from 'react'; // import react
+import Section from './Section'; // import section component
+import styles from './Projects.module.css'; // import css for styling
 
+// projects component
 function Projects() {
+  // array of objects for project data
   const projectData = [
     {
       name: 'open-lambda',
@@ -28,12 +30,14 @@ function Projects() {
   ];
 
   return (
+    // using section component for the projects section
     <Section id="projects" title="Projects">
       <div className="container" style={{ maxWidth: '1200px' }}>
         <div className="row justify-content-center">
-          {projectData.map((project, index) => (
+          {/* map through the project data and display them */}
+          {projectData.map((project) => (
             // change col-lg-6 to col-lg-5 to make the cards smaller
-            <div key={index} className="col-lg-5 mb-5">
+            <div key={project.name} className="col-lg-5 mb-5">
               <div className={styles.card__article}>
                 <div className={styles.card__image}>
                   <img
@@ -41,6 +45,7 @@ function Projects() {
                     alt={project.name}
                     className={styles.card__img}
                   />
+                  {/* github icon */}
                   <a
                     href={project.githubLink}
                     className={styles.githubIcon}
@@ -51,6 +56,7 @@ function Projects() {
                   </a>
                   <div className={styles.card__shadow}></div>
                 </div>
+                {/* project name and description */}
                 <div className={styles.card__data}>
                   <h3 className={styles.card__name}>{project.name}</h3>
                   <p className={styles.card__description}>

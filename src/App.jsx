@@ -1,11 +1,12 @@
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About';
-import Skills from './components/Skills';
-import Fun from './components/FunStuff';
-import Footer from './components/Footer';
-import Projects from './components/Projects';
+import Navbar from './components/Navbar'; // import navbar component
+import Home from './components/Home'; // import home component
+import About from './components/About'; // import about component
+import Skills from './components/Skills'; // import skills component
+import Fun from './components/FunStuff'; // import fun stuff component
+import Footer from './components/Footer'; // import footer component
+import Projects from './components/Projects'; // import projects component
 
+// main app component
 function App() {
   return (
     <div>

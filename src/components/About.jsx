@@ -1,7 +1,9 @@
-import Section from './Section';
-import styles from './About.module.css'; // Import the css for styling
+import Section from './Section'; // import section component
+import styles from './About.module.css'; // import css for styling
 
+// about component
 function About() {
+  // array of objects for about me points
   const aboutPoints = [
     {
       icon: '/assets/animated-icons/graduation.png',
@@ -29,8 +31,10 @@ function About() {
     },
   ];
   return (
+    // using section component for the about section
     <Section id="about" title="About Me">
       <div className="row align-items-stretch" style={{ maxWidth: '1300px' }}>
+        {/* my image */}
         <div className="col-md-6 text-center">
           <img
             src="/assets/me.jpeg"
@@ -39,12 +43,14 @@ function About() {
             style={{ objectFit: 'contain' }}
           />
         </div>
+        {/* about me points container */}
         <div className="col-md-6">
           <div
             className="nes-container is-dark with-title h-80"
             style={{ backgroundColor: 'hsl(212, 42%, 20%)' }}
           >
             <div className="text-white text-start">
+              {/* map through the about me points and display them */}
               {aboutPoints.map((point) => (
                 <div key={point.id} className={styles.aboutItem}>
                   <img src={point.icon} alt="" className={styles.aboutIcon} />

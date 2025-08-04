@@ -1,10 +1,13 @@
+// footer component
 function Footer() {
   return (
     <div id="contact" className="container-fluid text-bg-dark">
       <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        {/* copyright info */}
         <div className="col-md-4">
           <span className="mb-3 mb-md-0 text-white">© 2025 Devagya Gupta</span>
         </div>
+        {/* social media links */}
         <ul className="nav col-md-4 justify-content-end list-unstyled d-flex align-items-center">
           <li className="me-3">
             <a
